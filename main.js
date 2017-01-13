@@ -14,31 +14,26 @@ Have fun!
 
 =======================================================
 */
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+// $(document).ready(function() {
 
-var x=1
-console.log(x);
-// var xhr = new XMLHttpRequest();
+  // document.getElementById("demo").innerHTML = "<p> "+ data +" </p>";
+  function changeColor(newColor) {
+    var elem = document.getElementById("para");
+    elem.style.color = newColor;
+  }
+// var x=1
+// console.log(x);
+// var $xhr = $.getJSON('api.openweathermap.org/data/2.5/weather?id=4671654&APPID=7e318ef8ce6a59d9c41331fe20783a7b');
 //
-// xhr.addEventListener('load', function() {
-//     if (xhr.status !== 200) {
-//        return;
+// $xhr.done(function(data) {
+//     if ($xhr.status !== 200) {
+//         return;
 //     }
 //
-//     var data = JSON.parse(xhr.responseText);
+//     console.log(data.main);
+// });
 //
-//     console.log(data); });
-var $xhr = $.getJSON("http://api.openweathermap.org/data/2.5/forecast/city?id=4671654&APPID=7e318ef8ce6a59d9c41331fe20783a7b");
-
-$xhr.done(function(data) {
-    if ($xhr.status !== 200) {
-        return;
-    }
-console.log(main.pressure);
-
-
-
-
-
-xhr.open('GET', "http://api.openweathermap.org/data/2.5/forecast/city?id=4671654&APPID=7e318ef8ce6a59d9c41331fe20783a7b");
-xhr.send();
+// $xhr.fail(function(err) {
+//     console.log(err);
+// });
+// // });
